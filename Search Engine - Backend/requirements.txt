@@ -1,0 +1,10 @@
+fastapi
+bz2file
+transformers
+uvicorn
+pandas
+scikit-learn
+elasticsearch
+requests
+pydantic-settings
+--pre torch --index-url https://download.pytorch.org/whl/nightly/cpu
