@@ -9,8 +9,8 @@ from typing import ClassVar
 
 
 class Settings(BaseSettings):
-    mini_lm_model:BertModel = BertModel.from_pretrained("Models\BertModel")
-    mini_lm_tokenizer:BertTokenizerFast = BertTokenizerFast.from_pretrained("Models\BertTokenizer")
+    all_mpnet_base_model:BertModel = BertModel.from_pretrained("Models\BertModel")
+    all_mpnet_base_tokenizer:BertTokenizerFast = BertTokenizerFast.from_pretrained("Models\BertTokenizer")
     corpus:pd.DataFrame = getCorpus()
     stopwords:list = getStopwords()
     rows:int = 200
