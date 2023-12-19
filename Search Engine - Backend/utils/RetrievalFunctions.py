@@ -40,14 +40,14 @@ def mean_pooling(model_output, attention_mask):
 
 def getEmbeddings(text, settings):    
     #Tokenize sentences
-    #mini_lm_model = BertModel.from_pretrained("Models/")
-    #mini_lm_tokenizer = BertTokenizerFast.from_pretrained("Models/Tokenizer")
+    #all_mpnet_base_model = BertModel.from_pretrained("Models/")
+    #all_mpnet_base_tokenizer = BertTokenizerFast.from_pretrained("Models/Tokenizer")
 
-    encoded_input = settings.mini_lm_tokenizer(text, padding=True, truncation=True, max_length=128, return_tensors='pt',is_split_into_words=True)
+    encoded_input = settings.all_mpnet_base_tokenizer(text, padding=True, truncation=True, max_length=128, return_tensors='pt',is_split_into_words=True)
 
     #Compute token embeddings
     with torch.no_grad():
-      model_output = settings.mini_lm_model(**encoded_input)
+      model_output = settings.all_mpnet_base_model(**encoded_input)
 
     #Perform pooling. In this case, mean pooling
     sentence_embeddings = mean_pooling(model_output, encoded_input['attention_mask'])
