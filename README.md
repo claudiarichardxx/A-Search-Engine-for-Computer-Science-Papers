@@ -4,7 +4,7 @@ A simple search engine for computer science papers with two modes of retrieval:
 - **Syntactic Search**: Traditional keyword-based matching  
 - **Semantic Search**: Embedding-based similarity search for contextual results
 
-🎥 [Watch Demo](#) *https://drive.google.com/file/d/138yKlAD_liaoGztbctpOrMsLbIMtKM61/view?usp=drive_link*
+🎥 [Watch Demo](#) *(https://drive.google.com/file/d/138yKlAD_liaoGztbctpOrMsLbIMtKM61/view?usp=drive_link)*
 
 ---
 
