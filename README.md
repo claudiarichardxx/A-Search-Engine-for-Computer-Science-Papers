@@ -64,10 +64,60 @@ Use cases include:
 
 ---
 
+## Folder structure
+```
+.
+├── Search Engine - Backend/
+│   ├── ClassifierResources/
+|       |── Train.xlsx
+│   ├── Resources/
+|       ├── stopWords.txt
+│   ├── utils/
+│   ├── config.py
+│   ├── main.py
+│   ├── createDb.py           # Run after setup.py to build and index DB
+│   ├── embeddingEvaluation.ipynb
+│   ├── requirements.txt
+│   ├── setup.py
+│   └── readme.txt
+│
+├── Search Engine - Frontend/
+│   ├── public/
+│   ├── src/
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── vite.config.js
+│   └── README.md
+```
+---
+
 ## 🛠️ Getting Started
 
 ### Prerequisites
 - Python 3.8+
 - Node.js
 
+### Backend Setup
+```
+cd "Search Engine - Backend"
+pip install -r requirements.txt
+python setup.py
+python createDb.py
+```
+This scrapes arXiv, builds the database, and pushes it to Elasticsearch with clustering.
 
+### Frontend Setup
+```
+cd "Search Engine - Frontend"
+npm install
+npm run dev
+```
+---
+## 📌 Notes
+
+- createDb.py must be executed after running setup.py.
+- Backend and frontend run independently and communicate over API.
+- For performance validation, the embeddingEvaluation.ipynb notebook uses [SentEval](https://github.com/facebookresearch/SentEval) to assess the quality of the generated embeddings
