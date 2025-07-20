@@ -99,6 +99,7 @@ Use cases include:
 ### Prerequisites
 - Python 3.8+
 - Node.js
+- [ElasticSearch](https://www.elastic.co/downloads/elasticsearch)
 
 ### Backend Setup
 ```
