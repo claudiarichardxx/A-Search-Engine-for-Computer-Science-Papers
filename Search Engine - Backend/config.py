@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     corpus:pd.DataFrame = getCorpus()
     stopwords:list = getStopwords()
     rows:int = 200
-    cluster_df: pd.DataFrame = pd.read_json('Data\cluster_df.json')
+    cluster_df: pd.DataFrame = pd.read_excel('Resources/cluster_df.xlsx', engine='openpyxl')
     client: ClassVar[Elasticsearch]   = Elasticsearch("http://localhost:9200")
     #clustering_model:KMeans = decompress_pickle('Models\KMeans\cluster_model_final.pbz2')
     #tfidf_model:TfidfVectorizer = decompress_pickle(r'Models\TFIDF\tfidf_model_final.pbz2')
